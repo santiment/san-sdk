@@ -1,2 +1,2 @@
 # san-sdk
-SDK for Santiment https://docs.santiment.net/apiexamples
+SDK for Santiment https://docs.santiment.net/
