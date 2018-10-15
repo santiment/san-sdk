@@ -8,6 +8,8 @@ SANBASE_API_KEY=put-your-sanbase-apikey Rscript example.r
 
 ### Getting Apikey
 
+Apikey is optional but without it for some metrics data may be limited to the interval: [3 months ago, 1 day ago].
+
 To obtain an api key you should [log in to sanbase](https://sanbase-low.santiment.net/login) and go to the `account` page - [https://sanbase-low.santiment.net/account](https://sanbase-low.santiment.net/account). There is an `API Keys` section and a `Generate new api key` button.
 
 #### Install `ghql` graphql client https://github.com/ropensci/ghql
