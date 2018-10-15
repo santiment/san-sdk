@@ -13,7 +13,7 @@ cli <- GraphqlClient$new(
 
 qry <- Query$new()
 
-# All projects
+# Get all project identifiers (slugs). They are used in other queries to get data for a specific project.
 qry$query('all_projects', '{
     allProjects {
         slug
