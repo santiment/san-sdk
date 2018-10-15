@@ -7,8 +7,8 @@ API_URL <- "https://api.santiment.net/graphql"
 API_KEY <- Sys.getenv("SANBASE_API_KEY")
 
 cli <- GraphqlClient$new(
-  url <- API_URL,
-  headers <- add_headers(Authorization = paste0("Apikey ", API_KEY))
+  url = API_URL,
+  headers = add_headers(Authorization = paste0("Apikey ", API_KEY))
 )
 
 qry <- Query$new()
