@@ -5,7 +5,7 @@ import san
 import matplotlib.pyplot as plt
 
 
-def fancy_plot(df, left_metrics:list, right_metric=None, signals=None):
+def fancy_plot(df, left_metrics:list, right_metric=None, signals=[]):
     ''' Quick visualization tool. '''
     fig, ax1 = plt.subplots(figsize=(18,9))
     for metric in left_metrics:
@@ -18,13 +18,12 @@ def fancy_plot(df, left_metrics:list, right_metric=None, signals=None):
         p1, = ax2.plot(df.index, df[right_metric], color='red', label=right_metric, linewidth=1.8)
         plt.legend(loc='upper left', fontsize=14)
 
-    if signals:
-        plt.vlines(
-            signals, 
-            df.min().min(),
-            df.max().max(),
-            color = '#424242', linewidth=1
-        )
+    plt.vlines(
+        signals, 
+        df.min().min(),
+        df.max().max(),
+        color = '#424242', linewidth=1
+    )
         
 
 def get_san_metric(start, end, metric, asset, interval, iterate_over_days=120, convert_index=True):
