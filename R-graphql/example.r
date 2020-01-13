@@ -3,8 +3,8 @@ library("jsonlite")
 library("httr")
 
 API_URL <- "https://api.santiment.net/graphql"
-# change with real Apikey
-API_KEY <- "SANBASE_API_KEY"
+# change with real Apikey in the .Renviron file
+API_KEY <- Sys.getenv("SANBASE_API_KEY") 
 
 cli <- GraphqlClient$new(
   url = API_URL,
